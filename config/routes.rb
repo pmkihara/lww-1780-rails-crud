@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
+  # as 7 rotas do crud são a mesma coisa que resources :restaurants
   get '/restaurants', to: 'restaurants#index'
   post '/restaurants', to: 'restaurants#create'
   get '/restaurants/new', to: 'restaurants#new', as: :new_restaurant
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
   patch '/restaurants/:id', to: 'restaurants#update'
   delete '/restaurants/:id', to: 'restaurants#destroy'
   get 'restaurants/:id/edit', to: 'restaurants#edit', as: :edit_restaurant
+
   # Defines the root path route ("/")
   # root "posts#index"
 end

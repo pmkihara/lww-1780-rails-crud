@@ -1,0 +1,5 @@
+<h1>Add a restaurant</h1>
+<%# Renderiza a partial _form.html.erb enviando o @restaurant como variável local %>
+<%= render 'form', restaurant: @restaurant %>
+<hr>
+<%= link_to 'Back to all restaurants', restaurants_path %>
